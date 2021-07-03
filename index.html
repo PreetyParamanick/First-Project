@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Its Your Page</title>
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+  <header>
+    <ul>
+      <li id="home"><button type="button" onclick='document.getElementById("home").innerHTML="Welcome Home!"'><img
+            src="./assets/img/home.png" alt="" width=20px><a href="">Home</a></button></li>
+      <li id="age"><button><img src="./assets/img/circular-line-with-word-age-in-the-center.png" alt="" width=20px><a
+            href="age_calculator.html" target="_blank">Age</a></button></li>
+      <li id="todo"><button><img src="./assets/img/todo.png" alt="" width=20px><a href="todo.html"
+            target="_blank">ToDo</a></button></li>
+      <li id="login"><button><img src="./assets/img/Login.png" alt="" width=20px><a href="login.html"
+            target="_blank">Login</a></button></li>
+    </ul>
+  </header>
+  <body style="background-image: url(./Assets/img/bg.jpg)">
+  <h1>Welcome! IT IS YOUR PAGE</h1>
+
+  <div class="flex-container">
+
+    <img style="height: 420px;" class="show" id="bell" src="./assets/img/Curveball-Newtons-Cradle-Animated-GIF.gif" alt="">
+    <img id="btn" style="height: 420px;" class="show" id="clock" src="./assets/img/clock.png">
+    <img class="show" id="bulb" src="./assets/img/unnamed.gif" alt="">
+  </div>
+  <div id="timeshow">
+  </div>
+
+  <p style="font-family: Georgia, 'Times New Roman', Times, serif;">This is a simple page were you can chech your age
+    ,make a todo list an also can see the time by clicking on
+    the clock image. Enjoy! </p>
+
+  <!-- Footer -->
+  <footer class="footer">
+
+    <!-- Copyright -->
+    <div class=""> &copy;2021 Copyright :
+      <a href=""> (Its_your_page) </a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+  <script src="./Assets/js/clock.js"></script>
+</body>
+
+</html>

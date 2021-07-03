@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <title>Age</title>
+    <style>
+        body {
+            background-image: url(./assets/img/MtFuji-GettyImages-959111140.jpg);
+        }
+
+        center {
+            border: 2px solid black;
+            border-radius: 40px;
+            margin: 100px;
+            padding: 100px;
+        }
+
+       
+
+        footer.footer {
+            border-radius: 50px;
+            position: no fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(139, 147, 148, 0.397);
+            color: rgb(12, 6, 6);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h2 style="color: black" align="center"> Calculate your Age
+            <hr style="align-items: center" width="200px"><br>
+        </h2>
+
+
+        <!-- Choose a date and enter in input field -->
+        
+            <b> Enter Your Name: <input type=text id=""> </b> <br> <br>
+            <b> Enter Your Gender:
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Open this select GENDER
+                    <option>
+                    <option value="1">MALE</option>
+                    <option value="2">FEMALE</option>
+                    <option value="3">OTHER</option>
+                </select> <br> </b><br>
+            <b> Enter Date of Birth: <input type=date id=DOB required> </b>
+            <span id="message" style="color:red"> </span> <br><br><br>
+
+            <!-- Choose a date and enter in input field -->
+            <button type="submit" onclick="ageCalculator()"> Calculate age </button> <br><br>
+            <h3 style="color: rgba(0, 0, 0, 0.788)" id="result" align="center"></h3>
+            <button style="text-align: center;" type="submit"><a href="index.html">HOME</a></button>
+        
+    </center>
+
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <!-- Copyright -->
+        <div class="#"> &copy;2021 Copyright :
+            <a href="#"> (Its_your_page) </a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+    <script>
+        function ageCalculator() {
+            let userinput = document.getElementById("DOB").value;
+            let dob = new Date(userinput);
+            if (userinput == null || userinput == '') {
+                document.getElementById("message").innerHTML = "**Choose a date please!";
+                return false;
+            } else {
+
+                //calculate month difference from current date in time
+                let month_diff = Date.now() - dob.getTime();
+
+                //convert the calculated difference in date format
+                let age_dt = new Date(month_diff);
+
+                //extract year from date    
+                let year = age_dt.getUTCFullYear();
+
+                //now calculate the age of the user
+                let age = Math.abs(year - 1970);
+
+                //display the calculated age
+                return document.getElementById("result").innerHTML =
+                    " Your current age is: " + age + " years old! ";
+            }
+        }
+    </script>
+</body>
+</html>
